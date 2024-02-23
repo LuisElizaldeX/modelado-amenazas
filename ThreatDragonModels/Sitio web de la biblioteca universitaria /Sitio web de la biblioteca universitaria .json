@@ -35,8 +35,8 @@
                 "text": "Sitio web \nbiblioteca"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -47,15 +47,29 @@
             "data": {
               "type": "tm.Process",
               "name": "Sitio web \nbiblioteca",
-              "description": "",
+              "description": "El sitio web de la biblioteca\nuniversitaria se ejecutará en un servidor Linux con Apache. Este servidor será reforzado según el estándar de protección de servidores\nde la universidad",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "834a1fbe-f6da-4357-b63b-0b5887d39298",
+                  "title": "Denegación de servicio",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un atacante podría denegar el acceso a usuarios válidos, haciendo que el servidor web\nno esté disponible o sea inutilizable temporalmente por medio del envío de múltiples peticiones\nsimultaneas.",
+                  "mitigation": "Se utiliza un balanceo de cargas en el servidor web. Se monitorean las direcciones IP de los clientes y al encontrar un posible ataque, se bloquea el acceso. Se considera contratar un servicio de VPN para ocultar la dirección IP pública a los clientes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "14"
+                }
+              ]
             }
           },
           {
@@ -72,8 +86,8 @@
                 "text": "Usuarios"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -84,12 +98,26 @@
             "data": {
               "type": "tm.Actor",
               "name": "Usuarios",
-              "description": "",
+              "description": "(1) Usuario web anónimo.\n(2) Usuario con credenciales de inicio de sesión válidas.\n(3) Usuario con credenciales de inicio de sesión no válidas.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4daa25e9-5890-42a1-ab3c-80c5e287f667",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Acción de amenaza destinada a acceder y utilizar las credenciales de otro usuario, como el nombre de usuario y la contraseña.",
+                  "mitigation": "1. Autenticación adecuada\n2. Proteger datos secretos\n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "5"
+                }
+              ]
             }
           },
           {
@@ -106,8 +134,8 @@
                 "text": "Biblioteca"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -118,12 +146,26 @@
             "data": {
               "type": "tm.Actor",
               "name": "Biblioteca",
-              "description": "",
+              "description": "(4) Bibliotecario.",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "9c42bd73-4318-42a1-914f-5cdba1854730",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Acción de amenaza destinada a acceder y utilizar las credenciales de otro usuario, como el nombre de usuario y la contraseña.",
+                  "mitigation": "1. Autenticación adecuada\n2. Proteger datos secretos\n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "5"
+                }
+              ]
             }
           },
           {
@@ -332,48 +374,6 @@
             ],
             "labels": [
               "Web Response"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "d9982240-e9d7-4ca7-a907-79b4c25744cc",
-            "source": {
-              "cell": "951bd4c4-9637-47ec-969e-20968fc5ce03"
-            },
-            "target": {
-              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
-            },
-            "labels": [
-              "Web request"
             ]
           },
           {
@@ -686,6 +686,63 @@
             "labels": [
               "Querys"
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web request",
+              "description": "Respuestas recibidas por la\naplicación hacia los usuarios.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "4fb02a6e-3b2b-4019-b8a0-5955ca2686f3",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante. ",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. HTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "d9982240-e9d7-4ca7-a907-79b4c25744cc",
+            "source": {
+              "cell": "951bd4c4-9637-47ec-969e-20968fc5ce03"
+            },
+            "target": {
+              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
+            },
+            "labels": [
+              "Web request"
+            ]
           }
         ],
         "description": "Diagrama de flujo de datos para el sitio web de la biblioteca universitaria"
@@ -703,6 +760,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Luis Angel ",
-    "threatTop": 15
+    "threatTop": 19
   }
 }
