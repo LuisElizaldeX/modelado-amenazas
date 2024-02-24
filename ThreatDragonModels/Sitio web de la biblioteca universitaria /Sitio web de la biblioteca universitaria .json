@@ -674,6 +674,90 @@
                 "sourceMarker": {
                   "name": ""
                 },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Páginas",
+              "description": "Páginas web leídas desde el disco. ",
+              "outOfScope": true,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6b8434a8-1953-42d2-b48e-652c6326e5fe",
+            "labels": [
+              "Páginas"
+            ],
+            "source": {
+              "cell": "d7091157-c715-4718-87f4-6301458e7de8"
+            },
+            "target": {
+              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": "4 3"
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Lee web\napp config",
+              "description": "Archivo físico de configuración leído desde el disco.",
+              "outOfScope": true,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "245f7fcd-5605-48a5-a622-efa1a7a4fe9c",
+            "labels": [
+              "Lee web\napp config"
+            ],
+            "source": {
+              "cell": "1255a5be-2b0d-4d32-ab2f-41d373790057"
+            },
+            "target": {
+              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
                 "strokeDasharray": null
               }
             },
@@ -791,90 +875,6 @@
                 "y": 500
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Páginas",
-              "description": "Páginas web leídas desde el disco. ",
-              "outOfScope": true,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "6b8434a8-1953-42d2-b48e-652c6326e5fe",
-            "labels": [
-              "Páginas"
-            ],
-            "source": {
-              "cell": "d7091157-c715-4718-87f4-6301458e7de8"
-            },
-            "target": {
-              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": "4 3"
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Lee web\napp config",
-              "description": "Archivo físico de configuración leído desde el disco.",
-              "outOfScope": true,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "245f7fcd-5605-48a5-a622-efa1a7a4fe9c",
-            "labels": [
-              "Lee web\napp config"
-            ],
-            "source": {
-              "cell": "1255a5be-2b0d-4d32-ab2f-41d373790057"
-            },
-            "target": {
-              "cell": "4022cf8d-77c3-4d5e-a5ac-9654c04583ec"
-            }
           }
         ],
         "description": "Diagrama de flujo de datos para el sitio web de la biblioteca universitaria"
